@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Pickup Form</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="form-container">
+        <h2>Waste Pickup Request Form</h2>
+        <form action="/pick" method="post">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phoneNo"  placeholder="Enter phone no" required>
+            </div>
+            <div class="input-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="input-group">
+                <label for="product">Product Name (Type of Waste)</label>
+                <input type="text" id="product" name="productName" required>
+            </div>
+            <div class="input-group">
+                <label for="quantity">Quantity of Waste</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+            <button type="submit" onclick="alerts()">Submit Request</button>
+        </form>
+    </div>
+</body>
+<script>
+    const alerts=()=>{
+        alert("Your sell request accepted. ThankYou!!!!!!");
+    }
+</script>
+</html>

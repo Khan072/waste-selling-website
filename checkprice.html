@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Price</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 0;
+            padding: 0; */
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+        .logo {
+            margin-right: 10px;
+            border-radius: 50%; /* Make the logo circular */
+        }
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .container-sellwaste {
+            width: 100%; /* Set width to 100% */
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Adjust the margin between rows */
+        }
+        .waste-item {
+            position: relative; /* Add relative positioning to contain the button */
+            margin: 0 10px 20px; /* Adjust the margin between items */
+            padding: 20px; /* Add padding to each item */
+            padding-bottom: 60px; /* Add padding to accommodate button and price */
+        }
+        .waste-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            transition: transform 0.3s; /* Add transition for smooth scaling */
+        }
+        .waste-item:hover img {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+        .waste-item p {
+            font-weight: bold;
+            margin-bottom: 10px; /* Add margin to separate from button */
+        }
+        .buy-button {
+            position: absolute; /* Position the button */
+            bottom: 10px; /* Adjust the vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Add transition for smooth effect */
+        }
+        .buy-button:hover {
+            background-color: #2980b9; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="KachraKart.png" alt="Kachra Exchange Logo" height="150" width="150" class="logo"> <!-- Adjusted height and width, and added border-radius -->
+            <div>
+                <!-- <button class="button" id="serviceBtn">Home</button> -->
+                <button class="button"><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></button>
+                <!-- <button class="button"><a href="waste.html" style="text-decoration:none; color: inherit;">Home</a></button> -->
+                <button class="button"><a href="checkprice.html" style="text-decoration: none; color: inherit;">Check Rate</a></button>
+                <!-- <button class="button" id="sellWasteBtn">Sell Waste</button> -->
+                <button class="button" id="sellWasteBtn"><a style="text-decoration: none;color: white;" href="signup.html">Sign-up</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-sellwaste">
+        <!-- Sell Waste section -->
+        <div class="row">
+            <div class="waste-item">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.I4MN8pPe3piSJTfoA92SQQHaH_&pid=Api&P=0&h=180" alt="Paper" />
+                <p>Price: RS 5 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+            <div class="waste-item">
+                <img src="https://images.wisegeek.com/recycling-bin-with-recycled-material.jpg" alt="Glass" />
+                <p>Price: RS 25 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+            <div class="waste-item">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.tUZT393IxsUi47mVcjs9ZgHaES&pid=Api&P=0&h=180" alt="Metal" />
+                <p>Price: RS 40 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="waste-item">
+                <img src="https://img.freepik.com/premium-vector/woman-hand-throws-organic-garbage_81894-2629.jpg?w=740" alt="Organic" />
+                <p>Price: RS 30 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+            <div class="waste-item">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.IJx7_j5iTuP0im63eaVR6AHaI-&pid=Api&P=0&h=180" alt="E-Waste" />
+                <p>Price: RS 40 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+            <div class="waste-item">
+                <img src="https://images.wisegeek.com/recycling-bin-with-recycled-material.jpg" alt="Plastic" />
+                <p>Price: RS 10 per KG</p>
+                <!-- <button class="buy-button">Sell</button> -->
+            </div>
+        </div>
+        <!-- <button style="width: 300px;height: 50px;background-color: #0ef;border-radius: 50px;"><b>Sell now</b></button> -->
+        <button class="button" id="sellWasteBtn"><a style="text-decoration: none;color: white;" href="/pickup" style="width: 300px;height: 50px;background-color: #0ef;border-radius: 50px;"><b>Sell now</b></a></button>
+    </div>
+</body>
+</html>

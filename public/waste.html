@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="waste.css">
+  <title>Kachra Exchange</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .header-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: -1;
+    }
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .logo {
+      margin-right: 10px;
+      border-radius: 50%; /* Make the logo circular */
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      text-align: center;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header style="width: 100%; height: 100vh; background-image: url('https://content.fortune.com/wp-content/uploads/2015/10/gettyimages-187997939.jpg');background-repeat: no-repeat;background-size: cover;">
+    <!-- <video class="header-video" autoplay muted loop>
+      <source src="./vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+    <div class="text-overlay">
+      <h2>Got scrap?</h2>
+      <p>Sell it to us.</p>
+    </div>
+    <div class="container">
+      <img src="./KachraKart.png" alt="Kachra Exchange Logo" height="150" width="150" class="logo"> <!-- Adjusted height and width, and added border-radius -->
+      <div>
+        <!-- <button class="button" id="serviceBtn">Home</button> -->
+        <!-- <button class="button" id="checkRateBtn">Check Rate</button> -->
+        <!-- <button class="button" id="sellWasteBtn">Sell Waste</button> -->
+        <button class="button"><a href="waste.html" style="text-decoration: none; color: inherit;">Home</a></button>
+        <button class="button" id="sellWasteBtn"><a style="text-decoration: none;color: white;" href="/checkrate">Check Rate</a></button>
+        <button class="button" id="sellWasteBtn"><a style="text-decoration: none;color: white;" href="/">Sign-up</a></button>
+      </div>
+    </div>
+  </header>
+</body>
+<script>
+  window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const alertParam = urlParams.get('alert');
+      if (alertParam === 'true') {
+          alert("Your message here");
+      }
+  };
+</script>
+</html>
